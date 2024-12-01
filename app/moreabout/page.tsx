@@ -1,26 +1,9 @@
 'use client';
 
 import CarouselDemo from '@/components/CaruselDemo';
-import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
 
 const About = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isEnglish, setIsEnglish] = useState(true);
-
-  const handleImageClick = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleLanguageToggle = () => {
-    setIsEnglish(!isEnglish);
-  };
-
   return (
     <div className='m-4 mt-8'>
       <div className='flex justify-between'>
@@ -30,184 +13,124 @@ const About = () => {
         >
           Home
         </Link>
-        <button
-          onClick={handleLanguageToggle}
-          className='bg-gray-800 text-white px-4 py-2 rounded mb-4 hover:bg-gray-600'
-        >
-          {isEnglish ? 'Переключиться на русский' : 'Switch to English'}
-        </button>
       </div>
 
-      {isEnglish ? (
-        <>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            Hello! My name is Serhii Kuznietsov, and I am a Fullstack Developer
-            with deep knowledge and experience in JavaScript. I am proficient in
-            HTML, CSS, JavaScript, Node.js, React, and Next.js, which allows me
-            to create both frontend and backend parts of web applications. I
-            also have experience with Git, GitHub, MongoDB, and Vercel.
-          </p>
-          <div className='flex justify-center'>
-            <CarouselDemo />
-          </div>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            I successfully completed a Fullstack development course at Genius
-            Space and earned a diploma, which certifies my skills and
-            competencies in this field.
-          </p>
+      <div className='flex justify-center'>
+        <CarouselDemo />
+      </div>
+      <h1 className='text-3xl text-center p-4'>Junior Fullstack Developer</h1>
 
-          <div className='flex justify-center items-center'>
-            <div
-              onClick={handleImageClick}
-              className='cursor-pointer transition-transform duration-300 hover:shadow-yellow-xl'
-            >
-              <Image
-                src='/images/diploma.jpg'
-                alt='diploma'
-                width={300}
-                height={300}
-                className='rounded-md'
-              />
-            </div>
+      <p
+        className='p-2 text-base leading-relaxed'
+        style={{ textIndent: '40px' }}
+      >
+        Hello! I’m Serhii Kuznietsov, and I’m from Ukraine, currently living in
+        Poland. I am a Full-Stack Developer skilled in HTML, CSS, JavaScript,
+        React, Next.js, and Node.js. I hold certifications in Full-Stack
+        Development, UX/UI Design, and Project Management.
+      </p>
+      <p
+        className='p-2 text-base leading-relaxed'
+        style={{ textIndent: '40px' }}
+      >
+        While my professional experience is primarily rooted in personal
+        projects, I have a proven ability to learn quickly, work effectively
+        under pressure, and adapt to new technologies. For the past eight years,
+        I’ve worked closely with clients in the internet connectivity sector,
+        honing my communication, problem-solving, and customer service skills.
+      </p>
 
-            {isModalOpen && (
-              <div
-                className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75'
-                onClick={handleCloseModal}
-              >
-                <div className='relative'>
-                  <Image
-                    src='/images/diploma.jpg'
-                    alt='diploma'
-                    width={320}
-                    height={400}
-                    className='rounded-md m-8'
-                  />
-                </div>
-              </div>
-            )}
-          </div>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            I am fluent in Ukrainian, Russian and Polish. My English level is
-            B1, which enables me to effectively communicate and work in
-            international teams. I am continuing to learn English to improve my
-            skills and reach new heights in my career. I am constantly striving
-            to improve my skills and learn new technologies to stay at the
-            forefront of web development.
-          </p>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            When I am not coding, I enjoy exploring new programming languages,
-            participating in hackathons, and sharing my knowledge with the
-            community. In my free time, I enjoy playing football and traveling,
-            which helps me relax and draw inspiration for new projects.
-          </p>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            If you have interesting projects or proposals, feel free to reach
-            out to me. I am always open to new opportunities and ready for new
-            challenges.
-          </p>
-        </>
-      ) : (
-        <>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            Привет! Меня зовут Сергей Кузнецов, и я - Fullstack разработчик со
-            знаниями и опытом работы с JavaScript. Я владею HTML, CSS,
-            JavaScript, Node.js, React и Next.js, что позволяет мне создавать
-            как фронтенд, так и бекенд части веб-приложений. Также у меня есть
-            опыт работы с Git, GitHub, MongoDB и Vercel.
-          </p>
-          <div className='flex justify-center'>
-            <CarouselDemo />
-          </div>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            Я успешно завершил курс по Fullstack разработке в школе Genius Space
-            и получил диплом, что подтверждает мои навыки и компетенции в этой
-            области.
-          </p>
-
-          <div className='flex justify-center items-center'>
-            <div
-              onClick={handleImageClick}
-              className='cursor-pointer transition-transform duration-300 hover:shadow-yellow-xl'
-            >
-              <Image
-                src='/images/diploma.jpg'
-                alt='diploma'
-                width={300}
-                height={300}
-                className='rounded-md'
-              />
-            </div>
-
-            {isModalOpen && (
-              <div
-                className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75'
-                onClick={handleCloseModal}
-              >
-                <div className='relative'>
-                  <Image
-                    src='/images/diploma.jpg'
-                    alt='diploma'
-                    width={320}
-                    height={400}
-                    className='rounded-md m-8'
-                  />
-                </div>
-              </div>
-            )}
-          </div>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            Я свободно владею украинским, русским и польским языками. Мой
-            уровень английского языка - B1, что позволяет мне эффективно
-            общаться и работать в международных командах. Я продолжаю учить
-            английский, чтобы улучшить свои навыки и достичь новых высот в своей
-            карьере. Я стремлюсь постоянно улучшать свои навыки и изучать новые
-            технологии, чтобы оставаться на передовой веб-разработки.
-          </p>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            Когда я не пишу код, мне нравится изучать новые языки
-            программирования, участвовать в хакатонах и делиться своими знаниями
-            с сообществом. В свободное время я увлекаюсь игрой в футбол и
-            путешествиями, что помогает мне расслабиться и черпать вдохновение
-            для новых проектов.
-          </p>
-          <p
-            className='p-2 text-base leading-relaxed'
-            style={{ textIndent: '40px' }}
-          >
-            Если у вас есть интересные проекты или предложения, не стесняйтесь
-            связаться со мной. Я всегда открыт для новых возможностей и готов к
-            новым вызовам.
-          </p>
-        </>
-      )}
+      <ul className='list-disc pl-8 text-base leading-relaxed'>
+        <p className='pb-4 pt-2'>Hard Skills:</p>
+        <li>
+          <span className='text-blue-500'>Languages:</span> Ukrainian, Polish,
+          Russian, English: intermediate
+        </li>
+        <li>
+          <span className='text-blue-500'>Front-End Development:</span> HTML,
+          CSS, JavaScript, React, Node.js, Next.js, Tailwind CSS
+        </li>
+        <li>
+          <span className='text-blue-500'>Back-End Development:</span> Node.js,
+          Express
+        </li>
+        <li>
+          <span className='text-blue-500'>Working with databases:</span> MySQL,
+          MongoDB
+        </li>
+        <li>
+          <span className='text-blue-500'>Version Control:</span> GIT and GITHUB
+        </li>
+        <li>
+          <span className='text-blue-500'>UX/UI Design:</span> Understanding of
+          design principles, wireframing, and prototyping tools like Figma
+        </li>
+        <li>
+          <span className='text-blue-500'>Testing and Debugging:</span>{' '}
+          Familiarity with testing frameworks Mocha, Chai
+        </li>
+        <li>
+          <span className='text-blue-500'>Project Management:</span> Waterfall,
+          Agile Approach(Scrum Framework)
+        </li>
+        <li>
+          <span className='text-blue-500'>Client Relationship Management:</span>{' '}
+          8 years of customer service experience
+        </li>
+      </ul>
+      <ul className='list-disc pl-8 text-base leading-relaxed'>
+        <p className='pb-4 pt-2'>Soft Skills:</p>
+        <li>
+          <span className='text-blue-500'>Effective Communication</span>
+        </li>
+        <li>
+          <span className='text-blue-500'>Problem-Solving</span>
+        </li>{' '}
+        <li>
+          <span className='text-blue-500'>Team Collaboration</span>
+        </li>{' '}
+        <li>
+          <span className='text-blue-500'>Adaptability</span>
+        </li>{' '}
+        <li>
+          <span className='text-blue-500'>Time Management</span>
+        </li>{' '}
+        <li>
+          <span className='text-blue-500'>Attention to Detail</span>
+        </li>{' '}
+        <li>
+          <span className='text-blue-500'>Client Relationship Management</span>
+        </li>{' '}
+        <li>
+          <span className='text-blue-500'>Creativity</span>
+        </li>
+        <li>
+          <span className='text-blue-500'>Leadership</span>
+        </li>
+        <li>
+          <span className='text-blue-500'>Performing Under Pressure</span>
+        </li>
+        <li>
+          <span className='text-blue-500'>Critical Thinking</span>
+        </li>
+        <li>
+          <span className='text-blue-500'>Cultural Awareness</span>
+        </li>
+      </ul>
+      <p
+        className='p-2 text-base leading-relaxed'
+        style={{ textIndent: '40px' }}
+      >
+        As a motivated and enthusiastic aspiring full-stack developer, I am
+        eager to contribute my skills and knowledge while continuously learning
+        and growing in the field. With a strong foundation in front-end and
+        back-end technologies, I am committed to honing my expertise and staying
+        up-to-date with industry trends. I thrive in collaborative environments,
+        adapt quickly to new challenges, and welcome constructive feedback as an
+        opportunity for improvement. My goal is to bring value to the team by
+        delivering high-quality solutions while embracing continuous learning
+        and professional development.
+      </p>
     </div>
   );
 };

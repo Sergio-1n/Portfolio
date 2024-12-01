@@ -3,7 +3,7 @@ export const navItems = [
   { name: 'Projects', link: '#projects' },
   { name: 'Testimonials', link: '#testimonials' },
   { name: 'Contact', link: '#contact' },
-  { name: 'More about me', link: '/moreabout' },
+  { name: 'Resume', link: '/moreabout' },
 ];
 
 export const gridItems = [
@@ -108,33 +108,33 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "'Future feedBack'. - Collaborating with Serhii was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Serhii's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Serhii is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Future partner',
+      'Code is my canvas, and creativity is my brush. As a full-stack developer, I’m eager to build not just functional solutions but meaningful experiences that connect people and technology.',
+    name: 'Serhii Kuznietsov',
+    title: 'Partner',
   },
   {
     quote:
-      "'Future feedBack'. - Collaborating with Serhii was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Serhii's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Serhii is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Future partner',
+      'The tech world evolves every day, and so do I. With each project, I’m not just solving problems—I’m learning, growing, and shaping my future as a developer.',
+    name: 'Serhii Kuznietsov',
+    title: 'Partner',
   },
   {
     quote:
-      "'Future feedBack'. - Collaborating with Serhii was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Serhii's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Serhii is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Future partner',
+      'My journey as a developer started with curiosity and passion for creating. Today, I’m turning that passion into a career by mastering both front-end and back-end development.',
+    name: 'Serhii Kuznietsov',
+    title: 'Partner',
   },
   {
     quote:
-      "'Future feedBack'. - Collaborating with Serhii was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Serhii's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Serhii is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Future partner',
+      'Great software is built not just with skills, but with collaboration. I thrive in team environments, bringing dedication and adaptability to every project',
+    name: 'Serhii Kuznietsov',
+    title: 'Partner',
   },
   {
     quote:
-      "'Future feedBack'. - Collaborating with Serhii was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Serhii's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Serhii is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Future partner',
+      'My dream is simple: to transform ideas into reality through code. Every line I write brings me closer to creating impactful solutions for the world.',
+    name: 'Serhii Kuznietsov',
+    title: 'Partner',
   },
 ];
 
@@ -211,6 +211,6 @@ export const socialMedia = [
   {
     id: 3,
     img: '/link.svg',
-    link: 'https://www.instagram.com/s_kuznecov_?igsh=MW5rdDY3b25jdDkzZw%3D%3D&utm_source=qr',
+    link: 'https://www.linkedin.com/in/sergio-kuznietsov-4459a4338/',
   },
 ];

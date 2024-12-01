@@ -29,7 +29,7 @@ const Experience = () => {
             // remove bg-white dark:bg-slate-900
             className='flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800'
           >
-            <div className='flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2'>
+            <div className='flex lg:flex-row flex-col sm:place-items-center lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2'>
               <img
                 src={card.thumbnail}
                 alt={card.thumbnail}
@@ -39,7 +39,7 @@ const Experience = () => {
                 <h1 className='text-start text-xl md:text-2xl font-bold'>
                   {card.title}
                 </h1>
-                <p className='text-start text-white-100 mt-3 font-semibold'>
+                <p className='text-start max-w-80 text-white-100 mt-3 font-semibold'>
                   {card.desc}
                 </p>
               </div>
